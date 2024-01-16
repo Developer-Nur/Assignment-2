@@ -334,6 +334,36 @@ p {
     line-height: 1.5rem;
 }
 
+/* Perfect Place section style sheet */
+.perfect-place-content-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+}
+.perfect-place-content {
+    width: 45%;
+    padding: 10px;
+}
+
+.perfect-place-title {
+    margin-bottom: 20px;
+}
+
+.perfect-place-list {
+    margin-left: 15px;
+}
+
+.perfect-place-video {
+    width: 52%;
+    height: 370px;
+}
+
+.perfect-place-video > iframe {
+    width: 100%;
+    border-radius: 8px;
+}
+
 
 
 
@@ -529,14 +559,11 @@ p {
     padding: 20px 0;
 }
 
-
-
-
-
-
-
 /* media query For mobile devices */
 @media screen and (max-width: 600px) {
+    .container {
+        margin-top: 50px;
+    }
     .title-primary {
         font-size: 20px;
     }
@@ -618,6 +645,24 @@ p {
         font-size: 14px;
         line-height: 1.5rem;
     }
+
+    /* Perfect Place section  responsive area  */
+
+    .perfect-place-content-box {
+       flex-direction: column;
+    }
+    .perfect-place-content,
+    .perfect-place-video {
+        width: 100%;
+        
+    }
+
+
+
+
+
+
+
 
     /* Newsletter responsive area */
     .newsletter {
