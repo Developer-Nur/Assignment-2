@@ -145,6 +145,7 @@
 .banner-form form {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
@@ -323,7 +324,7 @@ p {
 
 .chooseus-card-title {
     color: var(--second-color);
-    font-size: 1.5rempx;
+    font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 10px;
 }
@@ -340,50 +341,112 @@ p {
 
 
 
+/* Newsletter section style sheet */
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 82px;
 
+}
 
+.newsletter-form {
+    width: 35%;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 20px 30px;
+}
 
+.form-title {
+    color: var(--second-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
 
+.form-des {
+    color: var(--accent-color);
+    line-height: 1.5rem;
+}
 
+.form-line {
+    width: 100%;
+    border: 0;
+    height: 2px;
+    background-color: rgba(19, 19, 24, 0.10);
+    ;
+}
 
+.subscrib-form {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
+.subscrib-form input {
+    width: 95%;
+    height: 35px;
+    padding: 10px 12px;
+    border: 0;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(19, 19, 24, 0.05);
+}
 
+.subscrib-form input:placeholder {
+    color: rgba(19, 19, 24, 0.30);
+}
 
+.subscrib-form>.form-btn {
+    width: 100%;
+    height: 45px;
+    padding: 10px 13px;
+    border-radius: 8px;
+}
 
+.form-image {
+    width: 750px;
+    border-radius: 8px;
+    position: relative;
+}
 
+.discount-card {
+    position: absolute;
+    right: 30px;
+    bottom: 65px;
+    background-color: var(--primary-color);
+    width: 280px;
+    height: 80px;
+    border-radius: 8px;
+    text-align: center;
+    transform: rotate(-30deg);
+    transform-origin: top;
+    padding-top: 10px;
+}
 
+.discount-card>p {
+    margin: 0;
+}
 
+.form-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
+.discount-car-des {
+    color: var(--color-white);
+    font-size: 1.2rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.discount-car-discount {
+    color: var(--color-white);
+    font-size: 1.6rem;
+    font-weight: 800;
+}
 
 
 
@@ -395,16 +458,20 @@ p {
 
 /* footer area style sheet */
 #footer {
+    margin: 0 auto;
     background: var(--footer-bg);
 }
 
 .footer-container {
-    margin: 0 auto;
+    text-align: center;
+    padding: 90px 90px 0;
 }
 
 .footer-logo {
     display: flex;
     justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
 }
 
 .footer-logo img {
@@ -419,30 +486,48 @@ p {
     margin: 0;
 }
 
-.footer-des { 
+.footer-des {
     text-align: center;
 }
 
 .social-links {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
 }
 
-.social-links > i {
+.social-links>i {
     color: var(--second-color);
     font-size: 25px;
     padding: 25px;
     cursor: pointer;
 }
 
-.social-links > i:hover {
+.social-links>i:hover {
     color: var(--primary-color);
 }
 
 .footer-line {
+    width: auto;
+    height: 2px;
+    border: 0;
     background: #DDDDDD;
+    margin-bottom: 41px;
 }
 
+.footer-bottom {
+    text-align: center;
+    color: var(--second-color);
+    font-family: Inter;
+    padding-bottom: 40px;
+}
+
+.footer-bottom>p {
+    margin: 0px;
+}
+
+.copy-right {
+    padding: 20px 0;
+}
 
 
 
@@ -532,5 +617,37 @@ p {
     .chooseus-content p {
         font-size: 14px;
         line-height: 1.5rem;
+    }
+
+    /* Newsletter responsive area */
+    .newsletter {
+        flex-direction: column;
+        padding-bottom: 82px;
+    }
+
+    .newsletter-form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .form-image {
+        width: 100%;
+    }
+
+    .discount-card {
+        width: 214px;
+        height: 79px;
+        padding-top: 15px;
+        position: absolute;
+        right: 35px;
+        bottom: 50px;
+    }
+
+    .discount-car-discount {
+        font-size: 1.2rem;
+    }
+
+    .discount-car-des {
+        font-size: 1rem;
     }
 }
