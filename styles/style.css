@@ -582,7 +582,7 @@ p {
     color: var(--accent-color);
     font-size: 1.6rem;
     font-weight: 800;
-    margin: 0;
+    margin: 7px;
 }
 
 .footer-des {
