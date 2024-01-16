@@ -43,6 +43,7 @@
 .button-primary {
     width: 140px;
     height: 45px;
+    margin: 0;
     padding: 10px;
     font-weight: 700;
     color: var(--color-white);
@@ -142,7 +143,7 @@
     margin-top: 40px;
 }
 
-.banner-form form {
+.banner-form>form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,19 +212,64 @@ button {
 }
 
 .popular-tours-image {
-    width: 40%;
+    width: 480px;
+    height: 510px;
 }
 
-.popular-tours-image img {
+.popular-tours-image>img {
     width: 100%;
-    max-height: 100%;
     border-radius: 16px;
+}
+
+/* Service area style sheet */
+.service-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-des {
+    text-align: center;
+}
+
+.service-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-card-boxes {
+    width: 28%;
+    height: 200px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    text-align: left;
+}
+
+.service-card-boxes {
+    box-shadow: 3px 4px 10px var(--primary-color);
+}
+
+.service-card-boxes * {
+    margin-bottom: 20px;
+}
+
+.service-card-boxes>i {
+    color: var(--primary-color);
+    font-size: 35px;
 }
 
 /* Destination area style sheet */
 
-.destination-content {
+.destination-content * {
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .destination-content h2,
@@ -232,29 +278,57 @@ p {
 }
 
 .destination-images {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.destination-gallery1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* grid-template-rows: repeat(2, 1fr) repeat(3, 1fr) repeat(2, 1fr); */
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.destination-gallery>img {
+.destination-gallery2 {
+    display: grid;
+    grid-template-columns: 32% 42% 24%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.destination-gallery3 {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.collage>img {
     width: 100%;
+    height: 300px;
 }
 
-.destination-gallery {
+.collage {
     position: relative;
 }
 
-.destination-gallery>p {
+.collage>div {
     color: var(--color-white);
     text-align: center;
-    font-size: 28px;
+    font-size: 1.4rem;
     font-weight: 800;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
 
 /*  Choose us section style sheet */
 .chooseus-container {
@@ -322,14 +396,16 @@ p {
     transform-origin: right;
 }
 
-.chooseus-card-title {
+
+/* shared style for choose us and services card areas */
+.card-title {
     color: var(--second-color);
     font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 10px;
 }
 
-.chooseus-card-des {
+.card-des {
     color: rgba(19, 19, 24, 0.70);
     line-height: 1.5rem;
 }
@@ -338,9 +414,11 @@ p {
 .perfect-place-content-box {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 30px;
 
 }
+
 .perfect-place-content {
     width: 45%;
     padding: 10px;
@@ -355,20 +433,14 @@ p {
 }
 
 .perfect-place-video {
-    width: 52%;
+    width: 50%;
     height: 370px;
 }
 
-.perfect-place-video > iframe {
+.perfect-place-video>iframe {
     width: 100%;
     border-radius: 8px;
 }
-
-
-
-
-
-
 
 
 /* Newsletter section style sheet */
@@ -376,7 +448,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     padding-bottom: 82px;
 
 }
@@ -438,15 +510,19 @@ p {
 }
 
 .form-image {
-    width: 750px;
+    width: 55%;
     border-radius: 8px;
     position: relative;
 }
 
+.form-img {
+    width: 630px;
+}
+
 .discount-card {
     position: absolute;
-    right: 30px;
-    bottom: 65px;
+    right: 120px;
+    bottom: 75px;
     background-color: var(--primary-color);
     width: 280px;
     height: 80px;
@@ -477,13 +553,6 @@ p {
     font-size: 1.6rem;
     font-weight: 800;
 }
-
-
-
-
-
-
-
 
 
 /* footer area style sheet */
@@ -559,11 +628,14 @@ p {
     padding: 20px 0;
 }
 
+
+
 /* media query For mobile devices */
 @media screen and (max-width: 600px) {
     .container {
         margin-top: 50px;
     }
+
     .title-primary {
         font-size: 20px;
     }
@@ -604,7 +676,7 @@ p {
         font-size: 14px;
     }
 
-    .banner-form form {
+    .banner-form>form {
         flex-direction: column;
         gap: 20px;
     }
@@ -615,12 +687,18 @@ p {
         padding: 33px;
     }
 
+    .banner-form>form>input::placeholder {
+        padding-left: 10px;
+    }
+
     .button-form,
     .banner-form form>input,
     select {
-        width: auto;
+        width: 100%;
         height: 50px;
         font-size: 16px;
+        margin-bottom: 12px;
+        padding: 0;
     }
 
     /* Popular tour section responsive area */
@@ -629,39 +707,71 @@ p {
         padding-top: 30px;
     }
 
-    .popular-tours-content,
-    .popular-tours-image {
+    .popular-tours-content {
         width: 100%;
     }
 
+    .popular-tours-image {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
 
     .popular-tours-btn {
         font-size: 20px;
     }
 
 
+    /* service area responsive area */
+    .service-card {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .service-card-boxes {
+        width: 95%;
+        height: auto;
+        padding: 20px;
+    }
+
+
+
+    /* destination section responsive area */
+    .destination-images {
+        margin-top: 10px;
+    }
+
+    .destination-gallery1,
+    .destination-gallery2,
+    .destination-gallery3 {
+        grid-template-columns: 1fr;
+    }
+
+
+
+
     /* Choose us section responsive area */
     .chooseus-content p {
         font-size: 14px;
+        width: 309px;
         line-height: 1.5rem;
     }
 
     /* Perfect Place section  responsive area  */
 
     .perfect-place-content-box {
-       flex-direction: column;
+        flex-direction: column;
     }
+
     .perfect-place-content,
     .perfect-place-video {
         width: 100%;
-        
+
     }
 
-
-
-
-
-
+    .perfect-place-btn {
+        font: 1.2rem;
+    }
 
 
     /* Newsletter responsive area */
@@ -675,7 +785,8 @@ p {
         padding: 20px;
     }
 
-    .form-image {
+    .form-image,
+    .form-img {
         width: 100%;
     }
 
